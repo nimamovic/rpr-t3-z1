@@ -7,7 +7,7 @@ public class FiksniBroj extends TelefonskiBroj {
     private Grad grad;
     private String brojFiksnog;
 
-    private static String[] pozivni = { "037", "031", "035", "032", "038", "030", "036", "039", "033", "034", "049"};
+    private static String[] pozivni = { "030", "031", "032", "033", "034", "035", "036", "037", "038", "039", "049"};
 
     public FiksniBroj(Grad grad, String broj){
         this.grad=grad;
