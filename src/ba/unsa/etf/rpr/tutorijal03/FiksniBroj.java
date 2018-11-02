@@ -7,13 +7,27 @@ public class FiksniBroj extends TelefonskiBroj {
     private Grad grad;
     private String brojFiksnog;
 
-    public FiksniBroj(Grad grad, String broj){Å
+    private static String[] pozivni = { "037", "031", "035", "032", "038", "030", "036", "039", "033", "034", "049"};
+
+    public FiksniBroj(Grad grad, String broj){
         this.grad=grad;
         this.brojFiksnog=broj;
     }
 
+    public String getPozivniGrada () {
+        return pozivni[grad.ordinal()];
+    }
+
+    public String getPozivniTrazenogGrada (Grad g) {
+        return pozivni[g.ordinal()];
+    }
+
     @Override
-    public String ispisi(){
+    public String ispisi () {
+        return pozivni[grad.ordinal()] + "/" + brojFiksnog;
+    }
+
+   /* public String ispisi(){
         String ispis=new String();
         ispis+="0";
         if(grad == Grad.TRAVNIK) ispis+="30";
@@ -30,9 +44,10 @@ public class FiksniBroj extends TelefonskiBroj {
         ispis+="/"+brojFiksnog;
         return ispis;
     }
-
+*/
     @Override
     public int hashCode(){
+        /*
         String poz=new String();
         if(grad == Grad.TRAVNIK) poz="30";
         else if(grad == Grad.ORASJE) poz="31";
@@ -46,5 +61,7 @@ public class FiksniBroj extends TelefonskiBroj {
         else if(grad == Grad.SIROKIBRIJEG) poz="39";
         else if(grad == Grad.BRCKO) poz="49";
         return poz.hashCode()+grad.hashCode();
+        */
+        return brojFiksnog.hashCode();
     }
 }
