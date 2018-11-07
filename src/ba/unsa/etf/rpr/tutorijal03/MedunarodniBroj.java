@@ -10,6 +10,14 @@ public class MedunarodniBroj extends TelefonskiBroj {
         this.medunarodniBroj=broj;
     }
 
+    public String getDrzava() {
+        return drzava;
+    }
+
+    public void setDrzava(String drzava) {
+        this.drzava = drzava;
+    }
+
     @Override
     public String ispisi(){
         String ispis=new String();
