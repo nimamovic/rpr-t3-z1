@@ -1,7 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal03;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Program {
 
@@ -34,11 +34,11 @@ public class Program {
 
         Scanner ulaz = new Scanner(System.in);
 
-        System.out.println("Izaberite opciju koju zelite : \n" + "1. Ddodaj fiksni broj u imenik: \n" + "2. Dodaj mobilni broji: \n" + "3. Dodaj medjundarodni broj: \n ");
+        System.out.println("Izaberite opciju koju zelite : \n" + "1- Ddodaj fiksni broj u imenik: \n" + "2- Dodaj mobilni broji: \n" + "3- Dodaj medjundarodni broj: \n " + "-1 za izlaz");
         int i;
         do {
             i = ulaz.nextInt();
-            else if (i == 1) {
+            if (i == 1) {
                 FiksniBroj fiksniBroj = unosFiksnog();
                 Scanner ulaz2 = new Scanner(System.in);
                 String ime = ulaz2.nextLine();
@@ -55,7 +55,7 @@ public class Program {
                 imenik.dodaj(ime,MedunarodniBroj);
             }
         } while (i != -1);
-        System.out.println("Izaberite opciju koju zelite : \n" + "1. Zelite grad pozivnog broja: \n" + "2. Zelite drazavu pozivnog \n" );
+        System.out.println("Izaberite opciju koju zelite : \n" + "1- Zelite grad pozivnog broja: \n" + "2- Zelite drazavu pozivnog \n" + "-1 - za izlaz");
         int k;
         do {
             k = ulaz.nextInt();
@@ -73,7 +73,9 @@ public class Program {
         } while (k != -1);
         System.out.println("Unesite prvo slovo od kojeg zelite telefonske brojeve");
         Scanner ulaz3 = new Scanner(System.in);
-        String slovo=ulaz3.nextLine();
+        char slovo=ulaz3.nextLine();
         String s= imenik.naSlovo(slovo);
+        System.out.println(s);
+
     }
     }
