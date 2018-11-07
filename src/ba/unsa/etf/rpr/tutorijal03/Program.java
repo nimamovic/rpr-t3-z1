@@ -52,7 +52,7 @@ public class Program {
                 MedunarodniBroj medunarodniBroj = unosMedjunarodnog();
                 Scanner ulaz2 = new Scanner(System.in);
                 String ime = ulaz2.nextLine();
-                imenik.dodaj(ime,MedunarodniBroj);
+                imenik.dodaj(ime,medunarodniBroj);
             }
         } while (i != -1);
         System.out.println("Izaberite opciju koju zelite : \n" + "1- Zelite grad pozivnog broja: \n" + "2- Zelite drazavu pozivnog \n" + "-1 - za izlaz");
@@ -73,7 +73,7 @@ public class Program {
         } while (k != -1);
         System.out.println("Unesite prvo slovo od kojeg zelite telefonske brojeve");
         Scanner ulaz3 = new Scanner(System.in);
-        char slovo=ulaz3.nextLine();
+        char slovo=ulaz3.next().charAt(0);
         String s= imenik.naSlovo(slovo);
         System.out.println(s);
 
