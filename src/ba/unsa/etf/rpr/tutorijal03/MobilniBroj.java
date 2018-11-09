@@ -11,7 +11,7 @@ public class MobilniBroj extends TelefonskiBroj {
 
     @Override
     public String ispisi(){
-        String ispis=new String();
+        String ispis= new String();
         ispis+="0"+mobilnaMreza+"/"+mobilniBroj;
         return ispis;
     }

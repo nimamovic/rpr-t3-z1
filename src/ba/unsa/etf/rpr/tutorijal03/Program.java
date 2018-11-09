@@ -60,12 +60,12 @@ public class Program {
             k = ulaz.nextInt();
             if (k == 1) {
                 FiksniBroj fiksniBroj = unosFiksnog();
-                String s = new String();
+                String s ;
                 s = fiksniBroj.getPozivniGrada();
                 System.out.println(s);
             } else if (k == 2) {
                 MedunarodniBroj medunarodniBroj = unosMedjunarodnog();
-                String s = new String();
+                String s ;
                 s = medunarodniBroj.getDrzava();
                 System.out.println(s);
             }

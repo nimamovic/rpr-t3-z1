@@ -18,7 +18,7 @@ public class Imenik {
     }
 
     public String dajIme(TelefonskiBroj broj){
-        String ime= new String();
+        String ime=new String();
         for(Map.Entry<String, TelefonskiBroj> e: mapa.entrySet()){
             if(e.getValue()==broj) ime=e.getKey();
         }
@@ -26,14 +26,14 @@ public class Imenik {
     }
 
     public String naSlovo(char s){
-        String ime= new String();
+        String ime;
         String str=new String();
         int i=0;
         for(Map.Entry<String, TelefonskiBroj> e: mapa.entrySet()){
             ime=e.getKey();
             if(ime.charAt(0)==s){
                 i++;
-                str+=String.valueOf(i) + ". " +  e.getKey() + " - " + e.getValue().ispisi()+ "\n";
+                str+=i+ ". " +  e.getKey() + " - " + e.getValue().ispisi()+ "\n";
             }
         }
         return str;
@@ -65,7 +65,7 @@ public class Imenik {
                     skup.add(e.getValue());
                 }
             }
-        };
+        }
         return skup;
     }
 
